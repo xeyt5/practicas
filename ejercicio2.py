@@ -7,3 +7,4 @@ class Solution:
 solution = Solution()
 print(solution.isPalindrome(121))
 print(solution.isPalindrome(423))
+
