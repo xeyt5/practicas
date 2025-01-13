@@ -9,6 +9,7 @@ class solution:
         else:
             return f"Tu número {x} es impar"
         
-#pasamos un numero que seria el 8 para ver si esta correcto el programa
+#pasamos un numero mediante consola y despues mediante la funcion verificara si es numero par o impar
 numero = solution()
-print(numero.numeroparoimpar(8))
+num = int(input("ingrese el numero: "))
+print(numero.numeroparoimpar(num))
