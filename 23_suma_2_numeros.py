@@ -1,26 +1,18 @@
 class Solution:
-    def margeTwoSorted(self, lista1, lista2) -> None:
-        resultado = []
-        lista_1_index = 0
-        lista_2_index = 0
+    def mergeTwoLists(self, list1, list2):
+        dummy = ListNode(0)
+        current = dummy
 
-        # Recorremos ambas listas y comparamos los elementos
-        while lista_1_index < len(lista1) and lista_2_index < len(lista2):
-            if lista1[lista_1_index] < lista2[lista_2_index]:
-                resultado.append(lista1[lista_1_index])
-                lista_1_index += 1
+        while list1 and list2:
+            if list1.val < list2.val:
+                current.next = list1
+                list1 = list1.next
             else:
-                resultado.append(lista2[lista_2_index])
-                lista_2_index += 1
+                current.next = list2
+                list2 = list2.next
+            current = current.next
 
-            # agregamos elementos restantes de la lista 1
-            resultado.extend(lista1[lista_1_index:])
-            # agregamos elementos restantes de la lista 2
-            resultado.extend(lista2[lista_2_index:])
-        return resultado
-    
-Sol = Solution()
-lista1 = [1,2,4]
-lista2 = [1,3,4]
-print(Sol.margeTwoSorted(lista1, lista2))
-     
+        # Agregar lo que sobra
+        current.next = list1 if list1 else list2
+
+        return dummy.next
