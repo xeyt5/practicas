@@ -11,5 +11,5 @@ class Solution():
                 stack.pop()
         return not stack
 Sol = Solution()
-entrada = "()[{"
+entrada = "()[]{}"
 print(Sol.isValid(entrada))

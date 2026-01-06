@@ -1,5 +1,5 @@
 class Solution():
-    def prefixCount(self, lista):
+    def longestCommonPrefix(self, lista):
         if not lista:
             return ""
         
@@ -11,6 +11,6 @@ class Solution():
                     return ""
         return prefix
 
-Solution = Solution()
-entrada = ["ra", "rana", "raton"]
-print(Solution.prefixCount(entrada))  
+Sol = Solution()
+entrada = ["flower", "flow", "flight"]
+print(Sol.longestCommonPrefix(entrada))  
