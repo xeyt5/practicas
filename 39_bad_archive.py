@@ -5,10 +5,10 @@ dangerous_extensions = [".exe", ".bat", ".sh", ".ps1", ".js", ".vbs", ".scr"]
 
 path = input("Introduce la ruta de la carpeta a analizar: ")
 if not os.path.isdir(path):
-    print("❌ La ruta no existe o no es una carpeta.")
+    print("La ruta no existe o no es una carpeta.")
     exit()
 
-print("\n🔍 Analizando archivos...\n")
+print("\n Analizando archivos...\n")
 
 for file in os.listdir(path):
     full_path = os.path.join(path, file)
@@ -29,6 +29,6 @@ for file in os.listdir(path):
             alerts.append(f"extensión peligrosa ({ext})")
 
     if alerts:
-        print(f"⚠️ {file}")
+        print(f"{file}")
         for alert in alerts:
             print(f"   - {alert}")
